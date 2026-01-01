@@ -17,8 +17,6 @@ comment: true
 
 # NVIDIA GPU 基础数据结构总结
 
-> 基于：[GPU Architecture and Programming — An Introduction](https://github.com/ForceInjection/AI-fundermentals/blob/main/gpu_programming/gpu_programming_introduction.md)
-
 ## 概述
 
 NVIDIA GPU 以分层方式执行代码，采用 **SIMT（单指令多线程）** 架构。现代 GPU 可以在一个周期内跨数千个数据点运行一条指令，实现高效的并行计算。
@@ -297,4 +295,3 @@ NVIDIA GPU 的基础数据结构构成了高效的并行计算框架：
   现代 GPU 性能对比
 
 ---
-
