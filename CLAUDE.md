@@ -99,12 +99,74 @@ The master learning roadmap in Chinese. When adding content, reference the relev
 ## Content Guidelines
 
 ### Adding Documentation
+
+#### Data Verification and Citation Requirements
+
+**CRITICAL**: When creating or modifying documentation, all technical data, performance metrics, and specifications MUST be verified and properly cited.
+
+**What requires verification**:
+- Hardware specifications (bandwidth, memory size, compute capability, etc.)
+- Performance numbers (TFLOPS, latency, throughput, benchmarks, etc.)
+- Technical claims (architecture details, optimization techniques, etc.)
+- Comparative data (speedup ratios, efficiency metrics, etc.)
+- Any quantitative information that could be time-sensitive or hardware-specific
+
+**Verification process**:
+1. **Search for authoritative sources** before including any data:
+   - Official documentation (NVIDIA, AMD, Intel, etc.)
+   - Research papers with peer review
+   - Technical blogs from reputable sources
+   - Benchmark results with clear methodology
+
+2. **Use WebSearch tool** to find current sources:
+   ```
+   Example: "NVIDIA H100 shared memory bandwidth specifications 2025"
+   ```
+
+3. **Cross-reference multiple sources** when possible:
+   - Compare official specs vs independent measurements
+   - Check for recent updates (hardware specs can change)
+   - Verify data consistency across sources
+
+4. **Citation format**:
+   - Use numbered footnotes: [¹], [²], [³], etc.
+   - Include a "数据来源" or "Data Sources" section at document end
+   - Format: `- **[¹] [Source Title](URL)** - Brief description of what this source provides`
+
+**Example citation**:
+```markdown
+## 概述
+
+**共享内存的关键特性**
+
+| 特性 | 说明 |
+|------|------|
+| **带宽** | 极高带宽（H100: ~33 TB/s）[¹] |
+| **容量** | 架构相关（H100: 256KB/SM）[²] |
+
+...
+
+## 数据来源
+
+本文档中的性能数据基于以下来源：
+
+- **[¹] [Chips and Cheese - H100 Bandwidth Analysis](https://chipsandcheese.com/p/nvidias-h100-funny-l2-and-tons-of-bandwidth)** - H100 L1/Shared Memory带宽实测数据
+- **[²] [NVIDIA Hopper Architecture In-Depth](https://developer.nvidia.com/blog/nvidia-hopper-architecture-in-depth/)** - H100架构共享内存容量规格
+```
+
+**Best practices**:
+- Prefer official documentation over blog posts
+- Use recent sources (within 2-3 years for fast-moving tech)
+- Indicate if data is architecture-specific or general
+- Update citations when modifying existing documents with new data
+- If uncertain about data accuracy, either verify or omit
+
+#### Documentation Structure and Style
+
 - **YAML Front Matter**: ALWAYS add YAML front matter to new markdown files (see examples above)
 - **Structure**: Follow the three-tier roadmap organization
 - **Language**: Primary documentation in Chinese, code comments and technical terms in English
 - **Code Examples**: Include practical, runnable examples when explaining concepts
-- **References**: Cite sources (papers, official docs, blog posts) for technical claims
-- **Verification**: When stating hardware specifications or performance numbers, verify against current sources (NVIDIA docs, recent benchmarks)
 
 ### Adding Implementation Projects
 - Place implementation code in appropriate subdirectories (e.g., `/cuda/` for GPU operators, `/frameworks/` for framework studies)
