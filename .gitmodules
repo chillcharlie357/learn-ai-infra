@@ -1,0 +1,3 @@
+[submodule "cuda/leetgpu-solutions"]
+	path = cuda/leetgpu-solutions
+	url = git@github.com:chillcharlie357/leetgpu-solutions.git

@@ -43,6 +43,8 @@ NVCC 简化了编译过程，自动处理不同的编译阶段，包括主机代
 
 ### 1.2 Kernel 定义与启动
 
+![grid](assets/image.png)
+
 #### 1.2.1 Kernel 定义
 
 Kernel 是在 GPU 上执行的函数，使用 `__global__` 说明符定义：
